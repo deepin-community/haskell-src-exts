@@ -1,0 +1,94 @@
+Source: haskell-src-exts
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Joachim Breitner <nomeata@debian.org>,
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8),
+ ghc-prof,
+ happy (>= 1.19),
+ haskell-devscripts (>= 0.15),
+Build-Depends-Indep: ghc-doc,
+Standards-Version: 4.4.0
+Homepage: https://github.com/haskell-suite/haskell-src-exts
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-src-exts
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-src-exts]
+
+Package: libghc-src-exts-dev
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: Haskell-Source with eXtensions library for GHC${haskell:ShortBlurb}
+ haskell-src-exts (HSX, haskell-source with extensions) is an extension of the
+ standard haskell-src package, and handles most common syntactic extensions to
+ Haskell, including:
+  * Multi-parameter type classes with functional dependencies
+  * Indexed type families (including associated types)
+  * Empty data declarations
+  * GADTs
+  * Implicit parameters (ghc and hugs style)
+  * Template Haskell
+ .
+ ${haskell:Blurb}
+
+Package: libghc-src-exts-prof
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: Haskell-Source with eXtensions library for GHC${haskell:ShortBlurb}
+ haskell-src-exts (HSX, haskell-source with extensions) is an extension of the
+ standard haskell-src package, and handles most common syntactic extensions to
+ Haskell, including:
+  * Multi-parameter type classes with functional dependencies
+  * Indexed type families (including associated types)
+  * Empty data declarations
+  * GADTs
+  * Implicit parameters (ghc and hugs style)
+  * Template Haskell
+ .
+ ${haskell:Blurb}
+
+Package: libghc-src-exts-doc
+Architecture: all
+Section: doc
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Conflicts:
+ haskell-src-exts-doc (<< 1.8.2-2),
+Provides:
+ haskell-src-exts-doc,
+Replaces:
+ haskell-src-exts-doc (<< 1.8.2-2),
+Description: API documentation of the haskell-src-exts library${haskell:ShortBlurb}
+ haskell-src-exts (HSX, haskell-source with extensions) is an extension of the
+ standard haskell-src package, and handles most common syntactic extensions to
+ Haskell, including:
+   * Multi-parameter type classes with functional dependencies
+   * Indexed type families (including associated types)
+   * Empty data declarations
+   * GADTs
+   * Implicit parameters (ghc and hugs style)
+   * Template Haskell
+ .
+ ${haskell:Blurb}

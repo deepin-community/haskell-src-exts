@@ -1,0 +1,486 @@
+haskell-src-exts (1.23.1-2) unstable; urgency=medium
+
+  * Use `-optcggc-min-expand=10` on armhf (helping Ubuntu and some low-memory
+    builders, and on m68k
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 02 Sep 2020 00:19:37 +0200
+
+haskell-src-exts (1.23.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Use `-optcggc-min-expand=10` on hppa (Closes: #647309)
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Mon, 17 Aug 2020 13:05:50 +0300
+
+haskell-src-exts (1.22.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Sat, 30 May 2020 12:52:47 -0400
+
+haskell-src-exts (1.20.3-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Clint Adams <clint@debian.org>  Sun, 28 Jul 2019 14:27:21 -0400
+
+haskell-src-exts (1.20.2-3) unstable; urgency=medium
+
+  [ Clint Adams ]
+  * Set Rules-Requires-Root to no.
+
+  [ Ilias Tsitsimpis ]
+  * Bump debhelper compat level to 10
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Sun, 30 Sep 2018 21:21:19 +0300
+
+haskell-src-exts (1.20.2-2) unstable; urgency=medium
+
+  * Build with -O0 on mips and mipsel.
+
+ -- Clint Adams <clint@debian.org>  Sun, 29 Apr 2018 18:54:16 -0400
+
+haskell-src-exts (1.20.2-1) unstable; urgency=medium
+
+  [ Ilias Tsitsimpis ]
+  * Change Priority to optional. Since Debian Policy version 4.0.1,
+    priority extra has been deprecated.
+  * Use the HTTPS form of the copyright-format URL
+  * Modify d/watch and Source field in d/copyright to use HTTPS
+  * Declare compliance with Debian policy 4.1.1
+  * Use salsa.debian.org URLs in Vcs-{Browser,Git} fields
+
+  [ Clint Adams ]
+  * Bump to Standards-Version 4.1.4.
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Mon, 09 Apr 2018 17:07:45 -0400
+
+haskell-src-exts (1.18.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Wed, 05 Jul 2017 07:19:42 +0100
+
+haskell-src-exts (1.17.1-4) unstable; urgency=medium
+
+  * Re-enable low-memory hack for mips/mipsel and GOT hack for
+    mips64el.
+  * Upload to unstable as part of GHC 8 transition.
+
+ -- Clint Adams <clint@debian.org>  Thu, 27 Oct 2016 18:36:12 -0400
+
+haskell-src-exts (1.17.1-3) experimental; urgency=medium
+
+  * Temporarily build-depend on ghc 8.
+  * Disable special arch-handling to see what still breaks.
+
+ -- Clint Adams <clint@debian.org>  Sun, 16 Oct 2016 01:35:33 -0400
+
+haskell-src-exts (1.17.1-2) unstable; urgency=medium
+
+  [ Dmitry Bogatov ]
+  * Use secure (https) uri in Vcs-Git field in 'debian/control'
+  * Bump standards version to 3.9.8 (no changes needed)
+  * Convert `debian/copyright' to dep5 format
+
+  [ Clint Adams ]
+  * Pass -mxgot to gcc on mips64el, thanks to Florian Weimer.
+    closes: #832824.
+
+ -- Clint Adams <clint@debian.org>  Sat, 01 Oct 2016 19:49:24 -0400
+
+haskell-src-exts (1.17.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Sun, 10 Jan 2016 23:58:57 -0500
+
+haskell-src-exts (1.16.0.1-5) unstable; urgency=medium
+
+  * Switch Vcs-Git/Vcs-Browser headers to new location.
+
+ -- Clint Adams <clint@debian.org>  Thu, 03 Dec 2015 14:55:05 -0500
+
+haskell-src-exts (1.16.0.1-4) experimental; urgency=medium
+
+  * Depend on haskell-devscripts >= 0.10 to ensure that this package
+    builds against GHC in experimental
+
+ -- Joachim Breitner <nomeata@debian.org>  Thu, 20 Aug 2015 10:28:43 +0200
+
+haskell-src-exts (1.16.0.1-3) unstable; urgency=medium
+
+  * Rebuild due to haskell-devscripts bug affecting the previous
+
+ -- Joachim Breitner <nomeata@debian.org>  Tue, 28 Apr 2015 23:59:02 +0200
+
+haskell-src-exts (1.16.0.1-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 27 Apr 2015 11:53:39 +0200
+
+haskell-src-exts (1.16.0.1-1) experimental; urgency=medium
+
+  * New upstream version
+
+ -- Dmitry Bogatov <KAction@gnu.org>  Fri, 09 Jan 2015 03:50:58 +0300
+
+haskell-src-exts (1.15.0.1-1) experimental; urgency=medium
+
+  * Depend on haskell-devscripts 0.9, found in experimental
+  * New upstream release
+
+ -- Joachim Breitner <nomeata@debian.org>  Sat, 20 Dec 2014 17:12:12 +0100
+
+haskell-src-exts (1.14.0.1-4) unstable; urgency=medium
+
+  * s/optoins/options/. sigh.
+
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 24 Nov 2014 22:45:09 +0100
+
+haskell-src-exts (1.14.0.1-3) unstable; urgency=medium
+
+  * Fix passing ggc-min-expand=10 to gcc.
+
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 24 Nov 2014 19:21:17 +0100
+
+haskell-src-exts (1.14.0.1-2) unstable; urgency=medium
+
+  * Pass ggc-min-expand=10 to gcc, might make this compile on mips*. Thanks to
+    Dejan Latinovic for the patch. Closes: #770830
+
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 24 Nov 2014 16:07:29 +0100
+
+haskell-src-exts (1.14.0.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Joachim Breitner <nomeata@debian.org>  Sun, 08 Jun 2014 00:42:17 +0200
+
+haskell-src-exts (1.14.0-1) unstable; urgency=low
+
+  [ Joachim Breitner ]
+  * Adjust watch file to new hackage layout
+
+  [ Raúl Benencia ]
+  * New upstream release
+
+ -- Raúl Benencia <rul@kalgan.cc>  Mon, 28 Oct 2013 15:45:46 -0300
+
+haskell-src-exts (1.13.5-2) unstable; urgency=low
+
+  * Enable compat level 9
+  * Use substvars for Haskell description blurbs
+
+ -- Joachim Breitner <nomeata@debian.org>  Fri, 24 May 2013 12:52:05 +0200
+
+haskell-src-exts (1.13.5-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Joachim Breitner <nomeata@debian.org>  Sun, 02 Dec 2012 23:40:42 +0100
+
+haskell-src-exts (1.13.3-1) experimental; urgency=low
+
+  [ Giovanni Mascellani ]
+  * Fix Homepage: link
+
+  [ Erik de Castro Lopo ]
+  * New upstream.
+
+  [ Joachim Breitner ]
+  * Depend on haskell-devscripts 0.8.13 to ensure this packages is built
+    against experimental
+  * Bump standards version, no change
+
+ -- Joachim Breitner <nomeata@debian.org>  Sun, 14 Oct 2012 12:02:07 +0200
+
+haskell-src-exts (1.11.1-3) unstable; urgency=low
+
+  * Add ${haskell:Depends} to -doc package
+
+ -- Joachim Breitner <nomeata@debian.org>  Fri, 10 Feb 2012 23:41:58 +0100
+
+haskell-src-exts (1.11.1-2) unstable; urgency=low
+
+  * Sourceful upload to rebuild documentation package
+
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 06 Feb 2012 18:43:35 +0100
+
+haskell-src-exts (1.11.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Joachim Breitner <nomeata@debian.org>  Fri, 17 Jun 2011 10:23:37 +0200
+
+haskell-src-exts (1.10.2-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * References updated: GHC 6 -> GHC.
+
+ -- Giovanni Mascellani <gio@debian.org>  Wed, 20 Apr 2011 00:43:55 +0200
+
+haskell-src-exts (1.9.6-1) unstable; urgency=low
+
+  [ Marco Silva ]
+  * Use ghc instead of ghc6
+
+  [ Iain Lane ]
+  * New upstream release 1.9.6
+  * Standards-Version → 3.9.1, no changes needed
+
+ -- Joachim Breitner <nomeata@debian.org>  Wed, 13 Apr 2011 11:53:49 +0530
+
+haskell-src-exts (1.9.0-2) unstable; urgency=low
+
+  * Run ghc6 without active timer (+RTS -V0 -RTS). Should work around
+    http://hackage.haskell.org/trac/ghc/ticket/4074 on slow arches. Negative
+    side effects not known (yet).
+
+ -- Joachim Breitner <nomeata@debian.org>  Fri, 25 Jun 2010 15:03:12 +0200
+
+haskell-src-exts (1.9.0-1) unstable; urgency=low
+
+  [ Giovanni Mascellani ]
+  * debian/rules: Documentation gets now installed in the correct place
+
+  [ Erik de Castro Lopo ]
+  * New upstream.
+  * control :
+    - Build depend on libghc6-cpphs-doc rather than haskell-cpphs-doc.
+    - FIx lintian warnings.
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Wed, 23 Jun 2010 18:18:15 +1000
+
+haskell-src-exts (1.8.2-3) unstable; urgency=low
+
+  * control: Use versioned Replaces: and Conflicts:
+
+ -- Marco Túlio Gontijo e Silva <marcot@debian.org>  Wed, 05 May 2010 18:01:53 -0300
+
+haskell-src-exts (1.8.2-2) unstable; urgency=low
+
+  * debian/control: Rename -doc package.
+
+ -- Marco Túlio Gontijo e Silva <marcot@debian.org>  Tue, 16 Mar 2010 10:59:48 -0300
+
+haskell-src-exts (1.8.2-1) unstable; urgency=low
+
+  [ Joachim Breitner ]
+  * Remove debian/clean, functionality in haskell-devscripts now
+
+  [ Marco Túlio Gontijo e Silva ]
+  * debian/source/format: Use 3.0 (quilt).
+
+  [ Joachim Breitner ]
+  * Update to new version, required for hsx and hlint (Closes: #569499)
+
+ -- Joachim Breitner <nomeata@debian.org>  Sat, 06 Mar 2010 13:34:04 +0100
+
+haskell-src-exts (1.3.0-2) unstable; urgency=low
+
+  [ Marco Túlio Gontijo e Silva ]
+  * debian/control: Change Priority: to extra.
+  * debian/watch: Use format that works for --download-current-version.
+  * debian/watch: Add .tar.gz to downloaded filename.
+  * debian/watch: Include package name in downloaded .tar.gz.
+  * debian/watch: Remove spaces, since they're not allowed by uscan.
+  * debian/control: Add field Provides: ${haskell:Provides} to -dev and
+    -prof packages.
+  * debian/control: Use Vcs-Browser: field.
+  * debian/control: Remove dependency in hscolour, since it's now a
+    dependency of haskell-devscripts.
+  * debian/control: Remove haddock from Build-Depends:, since it's now a
+    Depends: of haskell-devscripts.
+  * debian/control: Bump Standards-Version: to 3.8.4, no changes needed.
+
+  [ Joachim Breitner ]
+  * Bump haskell-devscripts dependency to 0.7
+
+ -- Joachim Breitner <nomeata@debian.org>  Thu, 11 Feb 2010 23:03:05 +0100
+
+haskell-src-exts (1.3.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Joachim Breitner <nomeata@debian.org>  Sun, 08 Nov 2009 12:42:02 +0100
+
+haskell-src-exts (1.1.4-1) unstable; urgency=low
+
+  [ Marco Túlio Gontijo e Silva ]
+  * debian/control: Use one package for line in dependencies.
+  * debian/rules: Make build depend only in build-arch to avoid building
+    indep packages in all architectures.
+  * debian/control: Use more sintetic name for Vcs-Darcs.
+
+  [ Joachim Breitner ]
+  * New upstream version
+  * Put haddoc et. al. into Build-Depends
+  * Bump standards version
+
+ -- Joachim Breitner <nomeata@debian.org>  Tue, 08 Sep 2009 18:13:15 +0200
+
+haskell-src-exts (1.0.1-1) unstable; urgency=low
+
+  * Take over for the Debian Haskell Group with maintainers permission.
+    Closes: 523182. Thanks to Florian for his previous work.
+  * This also Closes: 501279
+
+ -- Joachim Breitner <nomeata@debian.org>  Tue, 07 Jul 2009 10:31:24 +0200
+
+haskell-src-exts (1.0.1-0+nmu1) unstable; urgency=low
+
+  * Non-Maintainer upload
+  * New upstream release
+    + This does not ship HaRP any more, as it has its own source now. No
+      packages in Debian use HaRP at the moment.
+    + Closes: 526439 (no trhsx binary any more)
+  * Switch the build-system to a standard haskell-devscripts system
+    + This means we also build -doc and -prof packages
+  * Update Standards-Versions (no change)
+  * Added debian/watch file
+  * Updated copyright file
+  * Change Section to haskell
+
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 06 Jul 2009 21:49:34 +0200
+
+haskell-src-exts (0.2.1~darcs20071212-2) unstable; urgency=high
+
+  * Bump urgency to high as this upload fixes a RC bug.
+  * debian/control:
+    - Let the Vcs-* fields point to the trunk branch.
+    - Change the Section to libdevel as suggested by lintian warning
+      "dev-package-should-be-section-libdevel".
+  * debian/mk-haskell-depends: Removed. We use dh_haskell_depends from
+    haskell-devscripts.
+  * debian/rules:
+    - Only optimise on i386, amd64 and ia64 as the optimisation of the
+      parses can take a lot of memory. (Closes: #462848)
+
+ -- Arjan Oosting <arjan@debian.org>  Fri, 21 Mar 2008 23:39:58 +0100
+
+haskell-src-exts (0.2.1~darcs20071212-1) unstable; urgency=low
+
+  * New upstream darcs snapshot release which compiles with GHC 6.8.2.
+  * debian/control:
+    - Use the official Vcs-* fields.
+    - Add Homepage field.
+    - Remove dctrl-tools from the Build-Depends as the
+      debian/mk-haskell-depends script is removed.
+    - Add a versioned dependency on haskell-devscripts for
+      dh_haskell_depends.
+    - Bump Standard-Version to 3.7.3. No changes needed.
+    - Add some commented out binary stanzas for API documentation packages
+      we might want to build in the future.
+    - Bump the build dependency on ghc6 to 6.8.2 so we are sure we get the
+      Cabal version 1.2 which is needed to build this package.
+  * debian/{haskell-harp-doc,haskell-src-exts-doc}.docs: Added.
+  * debian/rules:
+    - Add some commented out code to generate API documentation. This does
+      not work yet, due some parse error haddock is having.
+    - Replace the call to debian/mk-haskell-depends with a call to
+      dh_haskell_depends from haskell-devscripts.
+    - Adjust the path to the .installed-pkg-config file which is now
+      created by the new Cabal version as dist/installed-pkg-config
+    - Adjust the regular expressions so the only match the Version and
+      Name fields in the .cabal files.
+  * Stop patching src/haskell-src-exts/Language/Haskell/Hsx/Lexer.hs as
+    upstream fixed the compilation issue by renaming isSymbol to
+    isHSymbol.
+
+ -- Arjan Oosting <arjan@debian.org>  Thu, 10 Jan 2008 00:26:36 +0100
+
+haskell-src-exts (0.2.1~darcs20070622-1) unstable; urgency=low
+
+  * Built against GHC 6.6.1 (Closes: #429022)
+  * New upstream darcs snapshot release:
+    - Added line pragmas to output.
+    - Added FFI support.
+    - Added support for infix types.
+    - Added mdo support.
+    - Added support for foralls type definition.
+  * The debian build system is replaced with the build system of
+    haskell-edison which also generates multiple GHC libraries.
+    The advantages are:
+    - No need to use haskell-devscripts which is not really suited for
+      multiple GHC libraries in one build.
+    - No need to hardcode the version number in the debian/rules file.
+    - No need to create links to the debian directory in the
+      subdirectories.
+    - Build with --enable-split-objs on i386 and amd64 which should result
+      in smaller binaries.
+  * debian/control:
+    - Drop haskell-devscripts from the Build-Depends and add dctrl-tools
+      which is need by the debian/mk-haskell-depends script.
+    - Add myself to the Uploaders field.
+    - Add X-Vcs-Svn and X-Vcs-Browser fields.
+  * debian/{runcompiler,buildmod.sh}: Removed. No longer necessary.
+  * debian/{postinst.in,prerm.in,ghc6.in,ghc6-pkg6.in,mk-haskell-depends}:
+    Added. Needed for the new debian/rules file
+
+ -- Arjan Oosting <arjan@debian.org>  Sun, 01 Jul 2007 00:03:08 +0200
+
+haskell-src-exts (0.2-5.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTBFS with ghc6 6.6 (Closes: #393642)
+    - src/haskell-src-exts/Language/Haskell/Hsx/Lexer.hs: hide isSymbol
+      when compiling with GHC 6.6.
+    - src/haskell-src-exts/haskell-src-exts.cabal: add CPP extension which
+      is needed for the change above.
+    - /src/haskell-src-exts/Language/Haskell/Hsx/{Transform.hs,Pretty.hs}:
+      modify some strings to keep cpp remove an invalid UTF sequence which
+      upsets GHC 6.6
+    - debian/rules: call ghc-pkg with --force when the haskell-src-exts
+      library is registered during as some directories are missing.
+
+ -- Arjan Oosting <arjan@debian.org>  Tue, 24 Oct 2006 23:21:37 +0200
+
+haskell-src-exts (0.2-5) unstable; urgency=low
+
+  * Removed bashism from debian/buildmod.sh (Closes: #376701).
+
+ -- Florian Ragwitz <rafl@debian.org>  Tue,  4 Jul 2006 15:41:13 +0200
+
+haskell-src-exts (0.2-4) unstable; urgency=low
+
+  * Rebuild against ghc6 6.4.2.
+  * Remove build-dep to libghc6-cabal-dev (>= 1.1.1) as ghc6 6.4.2 comes with
+    Cabal-1.1.4.
+
+ -- Florian Ragwitz <rafl@debian.org>  Mon,  3 Jul 2006 18:35:37 +0200
+
+haskell-src-exts (0.2-3) unstable; urgency=low
+
+  * Acknowledge previous NMU by Arjan Oosting <arjanoosting@home.nl>.
+  * Removed bashisms from debian/rules (Closes: #370690).
+  * Bump up Standards-Version to 3.7.2 (no changes).
+  * Use my new @debian.org maintainer address.
+
+ -- Florian Ragwitz <rafl@debian.org>  Wed,  7 Jun 2006 16:24:15 +0200
+
+haskell-src-exts (0.2-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * debian/control: add versioned libghc6-cabal-dev and ghc6 to the
+    Build-Depends to use Cabal version 1.1.1 or later which introduces a
+    new installation prefix for libraries. (Closes: #352690)
+  * src/trhsx/trhsx.cabal: added base and haskell98 to the Build-
+    Depends.
+
+ -- Arjan Oosting <arjanoosting@home.nl>  Tue, 18 Apr 2006 23:13:12 +0200
+
+haskell-src-exts (0.2-2) unstable; urgency=low
+
+  * Recompile against ghc 6.4.1.
+
+ -- Florian Ragwitz <rafl@debianforum.de>  Sun, 16 Oct 2005 16:30:35 +0200
+
+haskell-src-exts (0.2-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Florian Ragwitz <rafl@debianforum.de>  Wed, 20 Jul 2005 22:40:52 +0200
